@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: registry-center
+  datasource:
+    name: giscloud
+    url: jdbc:mysql://localhost:3306/giscloud
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.giscloud.registrycenter.model
